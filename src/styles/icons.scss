@@ -1,0 +1,142 @@
+/*
+ * Copyright (C) 2014-2018 L&T Technology Services, All Rights Reserved.
+ *
+ * This source code and any compilation or derivative thereof is the
+ * proprietary information of L&T and is confidential in nature.
+ * Under no circumstances is this software to be exposed to or placed under
+ * an Open Source License of any type without the expressed written permission
+ * of L&T.
+ */
+
+/**
+ * @author Suryaprakash Thirumurugesan
+ */
+
+@import "./css_function";
+
+$background-splash: "background/splash.png" 100vw 100vh;
+$background-black: "background/black_bg.png" 100vw 100vh;
+$background-complete: "background/Background_new.png" 100vw 100vh;
+$background-home-overlay: "background/Transparent_Overlay.png" 100vw 100vh;
+$background-premium-tag: "common/premium_tag.png" 4.58vw 2.41vh;
+$background-featured-banner-play-button: "unFocused/Featured_banner_play_button.png" 8.33vw 5.09vh;
+$background_pink_gradient:"background/background_pink_gradient.png" 100vw 100vh;
+$background-shades:"background/background.png" 100vw 100vh;
+$icon-pinkaccent: "unFocused/banner_area_bucket_title_pink_accent.png" 0.52vw 2.96vh;
+$background-logo:"common/logo.png" 6.82vw 12.13vh;
+$background-settings-overlay:"background/settings_overlay_bg.png" 100vw 100vh;
+$background-season-bg: "background/Season_BGGradient.png" 47vw 8.55vh;
+//$background-season-separator: "background/Season_Separator.png" 0.46vw 3.79vh;
+$background-season-separator: "background/Season_Separator.png" 7.18vw 4.55vh;
+
+$icon-loader: "common/loader.gif" 100vw 100vh;
+$playerUI-playButton:"unFocused/play_button_large.png" 6vw 8.45vh;
+$playerUI-pauseButton:"unFocused/Center_Pause.png" 6vw 8.45vh;
+$playerUI-forwardButton:"unFocused/10_Next.png" 4.65vw 8.45vh;
+$playerUI-Rewindbutton:"unFocused/10_Prev.png" 4.65vw 8.45vh;
+$playerUI-forwardButton-clicked:"focused/10_Next_clicked.png" 4.65vw 8.45vh;
+$playerUI-Rewindbutton-clicked:"focused/10_Prev_clicked.png" 4.65vw 8.45vh;
+$playerUI-seekbar-full:"background/seekbar_full.png" 82vw 1vh;
+$playerUI-seekbar-current:"background/seekbar_current.png" 0 1vh;
+$playerUI-time-holder:"common/time_indicator_outline.png" 8vw 5vh;
+
+$background-left-search: "background/search_left_side_bg.png" 100vw 100vh;
+$background-search-voice-icon: "background/voice_search_icon.png" 1.5vw 3vh;
+$background-search-voice-icon-bg: "background/voice_search_icon_bg.png" 100vw 100vh;
+$background-char-button-bg: "background/char_button_bg.png" 2.44vw 3.79vh;
+$background-space-icon: "background/space_icon.png" 2.8vw 3vh;
+$background-backspace-icon: "background/backspace_icon.png" 2vw 3vh;
+$background-backspace-icon-bg: "background/space_bkspace_button_bg.png" 100vw 100vh;
+
+$background-bottom-overlay: "background/bottom_gradient.png" 100vw 71.49vh;
+$background-left-overlay: "background/left_gradient.png" 100vw 71.29vh;
+$background-view-all: "common/View_all.png" 17.96vw 17.96vh;
+
+$menu-searchicon:"unFocused/search_icon_unselected.png" 4.9vw 8vh;
+$menu-searchicon-focused:"focused/search_icon_selected.png" 4.9vw 8vh;
+$menu-homeicon:"unFocused/home_icon_unselected.png" 4.9vw 8vh;
+$menu-homeicon-focused:"focused/home_icon_selected.png" 4.9vw 8vh;
+$menu-premiumicon:"unFocused/premium_icon_unselected.png" 4.9vw 8vh;
+$menu-premiumicon-focused:"focused/premium_icon_selected.png" 4.9vw 8vh;
+$menu-showsicon:"unFocused/shows_icon_unselected.png" 4.9vw 8vh;
+$menu-showsicon-focused:"focused/shows_icon_selected.png" 4.9vw 8vh;
+$menu-moviesicon:"unFocused/movies_icon_unselected.png"4.9vw 8vh;
+$menu-moviesicon-focused:"focused/movies_icon_selected.png" 4.9vw 8vh;
+$menu-videosicon:"unFocused/videos_icon_unselected.png"4.9vw 8vh;
+$menu-videosicon-focused:"focused/videos_icon_selected.png" 4.9vw 8vh;
+$menu-liveTvicon:"unFocused/live_tv_icon_unselected.png" 4.9vw 8vh;
+$menu-liveTvicon-focused:"focused/live_tv_icon_selected.png" 4.9vw 8vh;
+$menu-profileicon:"unFocused/account_icon_unselected.png" 4.9vw 8vh;
+$menu-profileicon-focused:"focused/account_icon_selected.png" 4.9vw 8vh;
+$menu-settingsicon:"unFocused/settings_icon_unselected.png" 4.9vw 8vh;
+$menu-settingsicon-focused:"focused/settings_icon_selected.png" 4.9vw 8vh;
+$menu-helpicon:"unFocused/help_icon_unselected.png" 4.9vw 8vh;
+$menu-helpicon-focused:"focused/help_icon_selected.png" 4.9vw 8vh;
+$menu-logofficon:"unFocused/exit_icon_unselected.png" 4.9vw 8vh;
+$menu-logofficon-focused:"focused/exit_icon_selected.png" 4.9vw 8vh;
+
+$button-inactive-new-here:"unFocused/new_here_reg_button_inactive.png" 15.1vw 7.22vh;
+$button-login-button-inactive:"unFocused/login_button_inactive.png" 18.65vw 7.22vh;
+$logo-Zee5: "common/Zee5_Logo_500.png" 15.99vw 28.43vh;
+$icon-featured-banner-play-button-icon: "unFocused/featured_banner_Play_button_icon.png" 1.56vw 3.78vh;
+$icon-premium-tag-vertical-line: "common/Premium_tag_vertical_line.png" 0.26vw 18.52vh;
+$icon-banner-scroll-indicator-active: "focused/featured_banner_page_active.png" 2.6vw 0.74vh;
+$icon-banner-scroll-indicator-inactive: "unFocused/featured_banner_page_inactive.png" 2.6vw 0.74vh;
+$icon-Something-Wrong: "unFocused/Something-Wrong.png" 7.5vw 11.48vh;
+$icon-rating-active: "focused/rating_active.png" 1.09vw 1.85vh;
+$icon-rating-inactive: "unFocused/rating_inactive.png" 1.09vw 1.85vh;
+$icon-hd:"unFocused/hd_icon.png" 2vw 2vh;
+$icon-play-button-focused: "focused/Play.png" 1.56vw 3.78vh;
+
+$icon-checkbox-selected:"selected/check_box_selected_2.png" 1.8vw 2.8vh;
+$icon-checkbox-unselected:"selected/checkbox_border.png" 1.8vw 2.8vh;
+$live_tv_checkbox_selected:"selected/live_tv_pink_line.png"1.8vw 2.8vh;
+
+$icon-radio_button_selected:"selected/radio_button_selected_2.png" 1.8vw 2.8vh;
+$icon-radio_button_unselected:"selected/radio_button_unselected.png" 1.8vw 2.8vh;
+$language_active_focused:"focused/language_active.png";
+$logout_active_focused: "focused/logout_active.png";
+$myplan_active_focused:"focused/myplan_active.png";
+$parental_active_focused:"focused/parental_active.png";
+$video_active_focused:"focused/video_quality_icon_active.png";
+$video_active_unfocused:"unFocused/video_quality_icon.png";
+$profile_active_focused:"focused/profile_active.png";
+$profile_active_unfocused:"unFocused/profile.png";
+$language_active_unfocused:"unFocused/language.png";
+$logout_active_unfocused: "unFocused/logout.png";
+$myplan_active_unfocused:"unFocused/myplan.png";
+$parental_active_unfocused:"unFocused/parental.png";
+$icon_notification_count_circle: "unFocused/icon_notification_count_circle.png";
+
+$adults_unfocused:"focused/adult_active.png";
+$kids_unfocused:"focused/kids_active.png";
+$teens_unfocused:"focused/teen_active.png";
+$adults_active_focused:"unFocused/adult.png";
+$kids_active_focused:"unFocused/kids.png";
+$teens_active_focused:"unFocused/teens.png";
+$AgeBackground_unfocused:"unFocused/AgeBackground.png";
+$AgeBackground_focused:"focused/AgeBackground_Active.png";
+$pin_icon:"selected/pin_dot.png";
+
+$cardicon_livetv:"unFocused/cardicon_livetv.jpg" 4.9vw 8vh;
+$cardicon_movies:"unFocused/cardicon_movies.jpg" 4.9vw 8vh;
+$cardicon_shows:"unFocused/cardicon_shows.jpg" 4.9vw 8vh;
+
+$kids_active:"focused/kids_active.png" 15.99vw 28.43vh;
+
+$MyPlan_CardBg_Active_focused:"focused/MyPlan_CardBg_Active.png" 36.25vw 46.98vh;
+$MyPlan_CardBg_unfocused:"unFocused/MyPlan_CardBg.png" 19.6vw 40.5vh;
+
+@mixin set-icon($name) {
+  width: nth($name, 2);
+  height: nth($name, 3);
+  background: url(getImage(nth($name, 1))) no-repeat;
+  background-size: contain !important;
+}
+
+@mixin set-background($name) {
+  width: nth($name, 2);
+  height: nth($name, 3);
+  background: url(getImage(nth($name, 1))) no-repeat;
+  background-size: 100% 100% !important;
+}

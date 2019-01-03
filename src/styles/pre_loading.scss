@@ -1,0 +1,40 @@
+/*
+ * Copyright (C) 2014-2018 L&T Technology Services, All Rights Reserved.
+ *
+ * This source code and any compilation or derivative thereof is the
+ * proprietary information of L&T and is confidential in nature.
+ * Under no circumstances is this software to be exposed to or placed under
+ * an Open Source License of any type without the expressed written permission
+ * of L&T.
+ */
+
+/**
+ * @author Suryaprakash Thirumurugesan
+ */
+
+@import './icons.scss';
+
+body::after {
+  content:
+    url(getImage(nth($menu-searchicon, 1)))
+    url(getImage(nth($menu-searchicon-focused, 1)))
+    url(getImage(nth($menu-homeicon, 1)))
+    url(getImage(nth($menu-homeicon-focused, 1)))
+    url(getImage(nth($menu-premiumicon, 1)))
+    url(getImage(nth($menu-premiumicon-focused, 1)))
+    url(getImage(nth($menu-showsicon, 1)))
+    url(getImage(nth($menu-showsicon-focused, 1)))
+    url(getImage(nth($menu-moviesicon, 1)))
+    url(getImage(nth($menu-moviesicon-focused, 1)))
+    url(getImage(nth($menu-videosicon, 1)))
+    url(getImage(nth($menu-videosicon-focused, 1)))
+    url(getImage(nth($menu-liveTvicon, 1)))
+    url(getImage(nth($menu-liveTvicon-focused, 1)))
+    url(getImage(nth($menu-profileicon, 1)))
+    url(getImage(nth($menu-profileicon-focused, 1)))
+    url(getImage(nth($menu-settingsicon, 1)))
+    url(getImage(nth($menu-settingsicon-focused, 1)))
+    url(getImage(nth($menu-logofficon, 1)))
+    url(getImage(nth($menu-logofficon-focused, 1)));
+  display: none;
+}

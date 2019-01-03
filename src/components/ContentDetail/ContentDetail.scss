@@ -1,0 +1,209 @@
+
+ @import '../../styles/icons.scss';
+ @import '../../styles/variable.scss';
+ 
+ .toggleSwitch {
+   .switch {
+     position: relative;
+     display: inline-block;
+     width: 60px;
+     height: 34px;
+   }
+ 
+   .switch input {
+     opacity: 0;
+     width: 0;
+     height: 0;
+   }
+ 
+   .slider {
+     position: absolute;
+     cursor: pointer;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     -webkit-transition: 0.4s;
+     transition: 0.4s;
+   }
+ 
+   .slider:before {/* stylelint-disable-line */
+     position: absolute;
+     content: "";
+     height: 26px;
+     width: 26px;
+     left: 4px;
+     bottom: 4px;
+     background-color: white;
+     -webkit-transition: 0.4s;
+     transition: 0.4s;
+   }
+ 
+   input:checked + .slider {
+     box-shadow: 0 0 1px $primary-color-pink;
+   }
+ 
+   input:focus + .slider {
+     box-shadow: 0 0 1px $primary-color-pink;
+   }
+ 
+   input:checked + .slider:before {/* stylelint-disable-line */
+     -webkit-transform: translateX(26px);
+     -ms-transform: translateX(26px);
+     transform: translateX(26px);
+   }
+ 
+   .slider.round {
+     border-radius: 34px;
+   }
+ 
+   .slider.round:before {/* stylelint-disable-line */
+     border-radius: 50%;
+   }
+ }
+ .toggleSwitch--Focused {/* stylelint-disable-line */
+   .slider { /* stylelint-disable-line */
+     background-color: $color-grey;
+   }
+ 
+   input:checked + .slider { /* stylelint-disable-line */
+     background-color: $primary-color-pink;
+   }
+ }
+ 
+ .itemTitle {
+  font-family: roboto-light, sans-serif;
+  font-size: 4.26vh;
+  line-height: 5.09vh;
+  padding-top: 2.96vh !important;
+  color: #fff;
+  clear: both;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+ }
+
+ .posterWrapper {
+  position: absolute;
+  z-index: -1;
+  img {
+    width: 100%;
+    height: 651px;
+  }
+ }
+
+ .ContentDetail{
+  padding: 25px 25px;
+ }
+
+ .ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .titlePinkAccent {
+  float: left;
+  height: 2.22vh;
+  width: 0.2vw;
+  background: url('../../assets/82356e6c74b97bd13ca7acc05363adcf.png') no-repeat;
+  font-size: 1.48vh;
+  color: #fff;
+  line-height: 1.15;
+  text-transform: capitalize;
+  padding-left: 5px;
+}
+
+.ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .genres {
+  padding-top: 3.43vh;
+  font-family: roboto-light, sans-serif;
+  font-size: 1.48vh;
+  color: #fff;
+  line-height: 2.22vh;
+  display: inline;
+  margin-left: 0.5vh;
+}
+
+.ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .icon-hd {
+  width: 2vw;
+  height: 2vh;
+  background: url('../../assets/5f37b5be50e87f1fef8a742d53925744.png') no-repeat;
+  background-size: 100% 100% !important;
+  display: inline;
+  text-align: center !important;
+  font-family: roboto-light, sans-serif;
+  font-size: 1.2vh;
+  color: #fff;
+  margin-left: 0.5vh;
+  padding: 0.12vh 0.5vh;
+}
+
+.ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .description {
+  padding-top: 3.61vh;
+  font-family: roboto-light, sans-serif;
+  font-size: 2.22vh;
+  color: #fff;
+  line-height: 2.96vh;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  -moz-line-clamp: 3;
+  -moz-box-orient: vertical;
+  max-height: 15.55vh;
+  height: auto;
+  margin-bottom: 0.46vh;
+}
+
+.ItemDetailContainer .ContentDetail .detailWrapper .castHolder .cast {
+  font-family: roboto-regular, sans-serif;
+  color: #fff;
+  font-size: 2.69vh;
+  margin: 0;
+  padding-bottom: 0.65vh;
+}
+
+.ItemDetailContainer .ContentDetail .detailWrapper .castHolder .firstrow {
+  font-family: roboto-medium, sans-serif;
+  font-size: 2.04vh;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 1.02vh;
+  td {
+      font-weight: bold;
+  }
+}
+
+.secondrow {
+  font-family: roboto-light, sans-serif;
+  font-size: 2.04vh;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table > tr {
+  vertical-align: middle;
+}
+
+.realeasedon {
+  color: #888;
+  font-family: roboto-light, sans-serif;
+  font-size: 1.76vh;
+  margin: 0;
+  margin-top: 2.4vh;
+}
+
+.director {
+  padding-top: 3.8vh;
+  font-family: roboto-regular, sans-serif;
+  font-size: 2.69vh;
+  color: #fff;
+  margin: 0;
+}
+
+.direcname {
+  padding-top: 1.67vh;
+  font-family: roboto-medium, sans-serif;
+  font-size: 2.04vh;
+  color: #fff;
+  margin: 0;
+}

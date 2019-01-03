@@ -1,0 +1,28 @@
+/*
+ * Copyright (C) 2014-2018 L&T Technology Services, All Rights Reserved.
+ *
+ * This source code and any compilation or derivative thereof is the
+ * proprietary information of L&T and is confidential in nature.
+ * Under no circumstances is this software to be exposed to or placed under
+ * an Open Source License of any type without the expressed written permission
+ * of L&T.
+ */
+
+@import './css_function.scss';
+@import './icons.scss';
+@import './variable.scss';
+
+.Button-Common {
+  background-color: transparent !important;
+  text-align: center !important;
+  line-height: 7.22vh !important;
+  font-size: 2.12vh;
+  color: $primary-color-white !important;
+  font-family: roboto-light, sans-serif;
+  @include set-background($button-inactive-new-here);
+
+  &--Focused {
+    background: white !important;
+    color: $color-pink !important;
+  }
+}
