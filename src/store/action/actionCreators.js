@@ -1,6 +1,6 @@
 import * as actionTypes from './actions';
-import axios from '../../items-axios';
-import zeeAxios from '../../zee5-axios';
+import itemsAxios from '../../axios/items-axios';
+import zeeAxios from '../../axios/zee5-axios';
 
 export const updateFetchedItems = (fetchedItems) =>{
     return (dispatch, state) => {
@@ -14,7 +14,7 @@ export const updateFetchedItems = (fetchedItems) =>{
 export const fetchItems = () => {
     return (dispatch) => {
         dispatch(startLoader());
-        axios.get('/shoppingcart-6df6b.json')
+        itemsAxios.get('/shoppingcart-6df6b.json')
         .then(res => {
             const fetchedItems = [];
             for (let key in res.data) {
@@ -34,7 +34,7 @@ export const fetchItems = () => {
 export const fetchSelectedItem = ({selectedItemId, oComponentRef}) => {
     return (dispatch) => {
         dispatch(startLoader());
-        axios.get(`/shoppingcart-6df6b/${selectedItemId}.json`)
+        itemsAxios.get(`/shoppingcart-6df6b/${selectedItemId}.json`)
         .then(res => {
             if(res.data){
                 res.data.id = selectedItemId;
