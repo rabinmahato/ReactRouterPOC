@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { Button, View, Image, Text, StyleSheet } from "react-native";
-import Employee from './Employee';
+import Item from './Item';
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
-import logo from '../logo.svg';
+import logo from '../assets/logo.svg';
 import {connect} from 'react-redux';
 import * as actionTypes from '../store/action/';
 
@@ -29,7 +29,7 @@ class Home extends Component {
     this.props.onFetchItems();
   }
   render() {
-    const props = this.props;
+    //const props = this.props;
     return (
         <React.Fragment>
             <Loader show={this.props.loading} />
@@ -45,8 +45,8 @@ class Home extends Component {
             
             <Button onPress={() => this.fnReloadList()} title="Reload List" />
             {this.props.items.length ? this.props.items.map((ele)=>
-            <Link key={Math.random()} to={"/person/"+ele.id} >
-                <Employee class="box" name={ele.name} style={ele.style} qauntity={ele.quantity}/>
+            <Link key={Math.random()} to={"/product/"+ele.id} >
+                <Item class="box" name={ele.name} style={ele.style} qauntity={ele.quantity}/>
             </Link>
             ): null}
         </React.Fragment>

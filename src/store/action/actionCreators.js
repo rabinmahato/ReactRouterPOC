@@ -1,5 +1,6 @@
 import * as actionTypes from './actions';
 import axios from '../../items-axios';
+import zeeAxios from '../../zee5-axios';
 
 export const updateFetchedItems = (fetchedItems) =>{
     return (dispatch, state) => {
@@ -30,7 +31,7 @@ export const fetchItems = () => {
     }
 }
 
-export const fetchSelectedItem = ({selectedItemId, componentRef}) => {
+export const fetchSelectedItem = ({selectedItemId, oComponentRef}) => {
     return (dispatch) => {
         dispatch(startLoader());
         axios.get(`/shoppingcart-6df6b/${selectedItemId}.json`)
@@ -39,7 +40,7 @@ export const fetchSelectedItem = ({selectedItemId, componentRef}) => {
                 res.data.id = selectedItemId;
                 dispatch(updateSelectedItem(res.data));
             } else {
-                componentRef.props.history.push('/NotFound');
+                oComponentRef.props.history.push('/NotFound');
             }
         })
         .catch(err => {
@@ -61,6 +62,32 @@ export const startLoader = () => {
 
 export const stopLoader = () => {
     return { type: actionTypes.STOP_LOADER };
+}
+
+
+export const fetchVideoContent = (selectedVideoId, oComponentRef) => {
+    return (dispatch) => {
+        dispatch(startLoader());
+        zeeAxios.get(`content/details/${selectedVideoId}?translation=en&country=IN`)
+        .then(res => {
+            if(res.data){
+                dispatch(updateSelectedVideoContent(res.data));
+            } else {
+                oComponentRef.props.history.push('/NotFound');
+            }
+        })
+        .catch(err => {
+            dispatch(stopLoader());            
+            oComponentRef.props.history.push('/NotFound');
+        });
+    }
+}
+
+export const updateSelectedVideoContent = (selectedVideoContent) => {
+    return {
+        type: actionTypes.UPDATE_VIDEO_CONTENT,
+        payload: selectedVideoContent
+    };
 }
 
 

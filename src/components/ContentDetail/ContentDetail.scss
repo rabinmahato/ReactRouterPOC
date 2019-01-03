@@ -95,8 +95,7 @@
  .ContentDetail{
   padding: 25px 25px;
  }
-
- .ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .titlePinkAccent {
+.titlePinkAccent {
   float: left;
   height: 2.22vh;
   width: 0.2vw;
@@ -108,7 +107,7 @@
   padding-left: 5px;
 }
 
-.ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .genres {
+.genres {
   padding-top: 3.43vh;
   font-family: roboto-light, sans-serif;
   font-size: 1.48vh;
@@ -118,7 +117,7 @@
   margin-left: 0.5vh;
 }
 
-.ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .icon-hd {
+.icon-hd {
   width: 2vw;
   height: 2vh;
   background: url('../../assets/5f37b5be50e87f1fef8a742d53925744.png') no-repeat;
@@ -132,7 +131,7 @@
   padding: 0.12vh 0.5vh;
 }
 
-.ItemDetailContainer .ContentDetail .detailWrapper .DetailsHolder .description {
+.description {
   padding-top: 3.61vh;
   font-family: roboto-light, sans-serif;
   font-size: 2.22vh;
@@ -145,12 +144,13 @@
   -webkit-box-orient: vertical;
   -moz-line-clamp: 3;
   -moz-box-orient: vertical;
-  max-height: 15.55vh;
+  width: 50%;
+  max-height: 14.55vh;
   height: auto;
   margin-bottom: 0.46vh;
 }
 
-.ItemDetailContainer .ContentDetail .detailWrapper .castHolder .cast {
+.cast {
   font-family: roboto-regular, sans-serif;
   color: #fff;
   font-size: 2.69vh;
@@ -158,7 +158,7 @@
   padding-bottom: 0.65vh;
 }
 
-.ItemDetailContainer .ContentDetail .detailWrapper .castHolder .firstrow {
+.firstrow {
   font-family: roboto-medium, sans-serif;
   font-size: 2.04vh;
   color: #fff;
@@ -206,4 +206,67 @@ table > tr {
   font-size: 2.04vh;
   color: #fff;
   margin: 0;
+}
+.LeftOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background: url('../../assets/95a518f9117758a19da28c7c07f74651.png') no-repeat;
+  background-size: 100% 100% !important;
+}
+
+.BottomOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background: url('../../assets/28b37c3ff837f267a81520b499b00a27.png') no-repeat;
+  background-size: 100% 100% !important;
+}
+
+.buttonList {
+  left: 13.54vw;
+  text-align: center !important;
+  padding-top: 3.8vh;
+  margin: 0;
+}
+
+
+.PlayButton {
+  min-width: 5.7vw !important;
+  line-height: 5.09vh !important;
+  padding: 0 8px;
+  color: #fff;
+  font-size: 2.2vh;
+  font-family: roboto-medium, sans-serif;
+  border-radius: 0.27vh;
+  border: 1px solid #bf006b;
+  background: none;
+  height: 5.09vh !important;
+  background-color: transparent !important;
+  position: relative;
+  float: left;
+  .Text{
+    margin-left: 2.1vw !important;
+    margin-right: 1.1vw !important;
+  }
+}
+
+
+.PlayButton--Focused {
+  background: white !important;
+  color: #bf006b !important;
+  border: 1px solid transparent;
+}
+.Icon {
+  width: 1.56vw;
+  height: 3.78vh;
+  background: url('../../assets/f69dc4cac03a2026d3e22f0d6c401d63.png') no-repeat;
+  background-size: contain !important;
+  position: absolute;
+  left: 0.5vw;
+  top: 1vh;
 }

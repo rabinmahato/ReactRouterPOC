@@ -1,22 +1,23 @@
 
 import React from "react";
-import Employee from  '../components/Employee';
+import Item from  '../components/Item';
 import Loader from './Loader';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as actionTypes from '../store/action/';
 
-class Profile extends React.Component{
+class ItemProfile extends React.Component{
   constructor(props){
     super(props);
+    this.state = {};
   }
   componentDidMount(){
-    console.log('Profile componentDidMount');
+    console.log('Item Profile componentDidMount');
     this.props.fnStartLoader();
     this.props.fetchSelectedItem(this.props.match.params.name, this);    
   }
   componentDidUpdate(){
-    console.log('Profile componentDidUpdate');
+    console.log('Item Profile componentDidUpdate');
     (this.props.selectedItem && !this.props.loading && (this.props.match.params.name !== this.props.selectedItem.id))  && this.props.fetchSelectedItem(this.props.match.params.name); 
   }
 
@@ -27,7 +28,7 @@ class Profile extends React.Component{
          <Loader show={this.props.loading} />
         {
           this.props.selectedItem ? 
-          <div>
+          <div style={{textAlign: "center"}}>
             <img ref="itemImage" src={this.props.selectedItem.imageURL} className="img-responsive" alt="" style={{height:'auto', width: '90px'}}/>
             <h4>
               {this.props.selectedItem.name}
@@ -44,8 +45,8 @@ class Profile extends React.Component{
 
         {this.props.items.length ? this.props.items.map((ele)=>
         <Link to={ele.id} key={Math.random()}>
-          {(id== ele.id) ?  <Employee class="box selected" name={ele.name} style={ele.style} qauntity={ele.quantity}/> :          
-          <Employee class="box" name={ele.name} style={ele.style} qauntity={ele.quantity}/>
+          {(id === ele.id) ?  <Item class="box selected" name={ele.name} style={ele.style} qauntity={ele.quantity}/> :          
+          <Item class="box" name={ele.name} style={ele.style} qauntity={ele.quantity}/>
           }
         </Link>
         ): null}
@@ -74,4 +75,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(mapStateToProps, mapDispatchToProps)(ItemProfile);

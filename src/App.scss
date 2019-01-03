@@ -67,4 +67,8 @@ body, html{
   background-image: url(/static/media/ZeeBack.0ab4efd9.PNG);
   background-repeat: round;
   height: 100%;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }

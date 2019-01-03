@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Employee = (props) => (
+const Item = (props) => (
     <React.Fragment>
         <div className={props.class}>
             <span>{props.name}</span>
@@ -10,4 +10,4 @@ const Employee = (props) => (
     </React.Fragment>
 );
 
-export default Employee;
+export default Item;
