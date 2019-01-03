@@ -1,23 +1,6 @@
 import * as actionTypes from './action/actions';
 
 const initialState = {
-    employees:[
-        {
-          name: "Rabin",
-          mail: "abc@gmail.com",
-          location: "Bangalore"
-        },
-        {
-          name: "XYZ",
-          mail: "xyz@gmail.com",
-          location: "Bangalore"
-        },
-        {
-          name: "Abc",
-          mail: "abcd@gmail.com",
-          location: "Bangalore"
-        }
-    ],
     items: [],
     contentItem: null,
     selectedItem: null,

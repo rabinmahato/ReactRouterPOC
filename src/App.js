@@ -11,9 +11,11 @@ class App extends Component {
     return (
       <div className="App">
           <Switch>
-            <Route exact path='/' component={()=>(<Redirect to="/Home"/>)}/>
+            {/* <Route exact path='/' component={()=>(<Redirect to="/Home"/>)}/>
             <Route exact path='/Home' component={Home}/>
-            <Route path='/product/:name' component={ItemProfile}/>
+            <Route path='/product/:name' component={ItemProfile}/> */}
+            {/* Temporary loading page would any video item */}
+            <Route exact path='/' component={()=>(<Redirect to="/Content/0-0-2481"/>)}/>
             <Route path='/NotFound' component={NotFound}/>
             <Route path='/Content/:id' component={ContentDetail} />
             {/* Bypass for all ther routes */}
