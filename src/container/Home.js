@@ -1,8 +1,10 @@
+/* This is a temporary component will be deleted later */
+
 import React, { Component } from "react";
 import { Button, View, Image, Text, StyleSheet } from "react-native";
-import Item from './Item';
+import Item from '../components/Item';
 import { Link } from 'react-router-dom';
-import Loader from './Loader';
+import Loader from '../components/Loader/Loader';
 import logo from '../assets/logo.svg';
 import {connect} from 'react-redux';
 import * as actionTypes from '../store/action/';

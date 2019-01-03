@@ -1,6 +1,6 @@
 import  React, { Component }  from 'react';
 import {connect} from 'react-redux';
-import Loader from '../Loader';
+import Loader from '../../components/Loader/Loader';
 import * as actionTypes from '../../store/action/';
 import "./ContentDetail.scss";
 
@@ -50,7 +50,7 @@ class ContentDetail extends Component {
       const mDisplay = m > 0 ? m + (m === 1 ? "min " : "min ") : "";
       //var sDisplay = s > 0 ? s + (s === 1 ? " second" : " seconds") : "";
       return hDisplay + mDisplay; 
-  }
+    }
     render() {
         return (
           <React.Fragment>

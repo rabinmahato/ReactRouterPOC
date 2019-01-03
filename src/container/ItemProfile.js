@@ -1,7 +1,9 @@
 
+/* This is a temporary component will be deleted later */
+
 import React from "react";
 import Item from  '../components/Item';
-import Loader from './Loader';
+import Loader from '../components/Loader/Loader';
 import { Link } from 'react-router-dom';
 import {connect} from 'react-redux';
 import * as actionTypes from '../store/action/';
