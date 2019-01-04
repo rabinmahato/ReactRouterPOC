@@ -27,18 +27,6 @@ const reducer = ( state = initialState, action ) => {
                 loading: false
             }
 
-        case actionTypes.UPDATE_ITEMS:
-            return {
-                ...state,
-                loading: false,
-                items: action.payload
-            };
-        case actionTypes.UPDATE_SELECTED_ITEM:
-            return {
-                ...state,
-                loading: false,
-                selectedItem: action.payload
-            }
         default:
             return state;
     }
