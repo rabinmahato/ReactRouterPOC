@@ -253,14 +253,13 @@ table > tr {
     margin-left: 2.1vw !important;
     margin-right: 1.1vw !important;
   }
+  &:hover,&:focus{
+    background: white !important;
+    color: #bf006b !important;
+    border: 1px solid transparent;
+  }
 }
 
-
-.PlayButton--Focused {
-  background: white !important;
-  color: #bf006b !important;
-  border: 1px solid transparent;
-}
 .Icon {
   width: 1.56vw;
   height: 3.78vh;

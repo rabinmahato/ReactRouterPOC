@@ -1,0 +1,40 @@
+
+.GridList--content {
+    background-color: transparent;
+    min-width: 128px;
+    margin: 5px;
+    position: relative;  
+}
+
+.Poster {
+    width: 13.06vw;
+    height: 20.5vh;
+}
+
+.Title {
+    width: 14.4vw;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;       
+    font-size: 1.85vh;
+    line-height: 2.4vh;
+    color: #fff;
+}    
+
+.Genre {
+    font-family: roboto-regular, noto-sans-regular, sans-serif;
+    position: absolute;
+    top: 24.55vh;
+    font-size: 1.67vh;
+    line-height: 1.66vh;
+    color: #949494;
+    text-transform: capitalize;
+}
+
+.related-list-item{
+    text-decoration: none;
+    outline: none;  
+    &:focus{        
+        border: 2px solid #ff008f;
+    }
+}

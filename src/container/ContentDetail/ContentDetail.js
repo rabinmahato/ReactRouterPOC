@@ -1,7 +1,11 @@
 import  React, { Component }  from 'react';
 import {connect} from 'react-redux';
+import { Link } from 'react-router-dom';
 import Loader from '../../components/Loader/Loader';
+import GridList from '../GridList/GridList';
+import GridListItem from '../../components/GridListItem/GridListItem';
 import * as actionTypes from '../../store/action/';
+import {secondsToHms} from '../../utility/common'; 
 import "./ContentDetail.scss";
 
 class ContentDetail extends Component {
@@ -9,7 +13,6 @@ class ContentDetail extends Component {
         super(props);
         this.state = { };
     }
-
 
     componentDidMount(){
       //get the id parameter
@@ -24,6 +27,8 @@ class ContentDetail extends Component {
       //Fetch video details
       (this.props.contentItem && !this.props.loading && (videoId !== this.props.contentItem.id))  && this.props.onFetchVideoContent(videoId, this); 
     }
+    //This lifecycle hook is used to modify state based on properties recieved
+    //if state is not modified return null
     static getDerivedStateFromProps(nextProps, prevState){
         return null;
     }
@@ -40,17 +45,6 @@ class ContentDetail extends Component {
 
     }
 
-    secondsToHms(seconds) {
-      seconds = Number(seconds);
-      const h = Math.floor(seconds / 3600);
-      const m = Math.floor(seconds % 3600 / 60);
-      //const s = Math.floor(seconds % 3600 % 60);
-  
-      const hDisplay = h > 0 ? h + (h === 1 ? "h " : "h ") : "";
-      const mDisplay = m > 0 ? m + (m === 1 ? "min " : "min ") : "";
-      //var sDisplay = s > 0 ? s + (s === 1 ? " second" : " seconds") : "";
-      return hDisplay + mDisplay; 
-    }
     render() {
         return (
           <React.Fragment>
@@ -69,7 +63,7 @@ class ContentDetail extends Component {
                       <div className="originalTitle"></div>
                       <div className="itemTitle">{this.props.contentItem.title}</div>
                       {/* <RatingStar key="ratingStar" /> */}
-                      <div className="genres">{`|  ${this.secondsToHms(this.props.contentItem.duration)}  | ${this.props.contentItem.genre.map((ele)=>{return ele.value}).join(", ")}  | 3+   |`}</div>
+                      <div className="genres">{`|  ${secondsToHms(this.props.contentItem.duration)}  | ${this.props.contentItem.genre.map((ele)=>{return ele.value}).join(", ")}  | 3+   |`}</div>
                       <div className="icon-hd" >{'HD'}</div>
                       <div className="description">{this.props.contentItem.description}</div>
                                         
@@ -102,7 +96,7 @@ class ContentDetail extends Component {
                       </div>
         
                       <div className="buttonList">
-                        <div className="PlayButton playButtn PlayButton--Focused" >
+                        <div className="PlayButton playButtn" tabIndex="0" role="button">
                           <div className="Icon"></div>
                           <div className="Text">Play</div>
                         </div>
@@ -111,7 +105,21 @@ class ContentDetail extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="CollectionDetail Hidden" key="collectionDetail" />
+                <GridList>
+                    {this.props.contentItem.related.map((ele,index)=>{
+                      return (
+                        <Link key={ele.id} to={"/Content/" + ele.id} className="related-list-item">                      
+                          <GridListItem 
+                                    title={ele.title} 
+                                    duration={ele.duration} 
+                                    assettype={ele.asset_subtype}
+                                    coverImage={`https://akamaividz1.zee5.com/resources/${ele.id}/cover/270x405/${ele.cover_image}?imwidth=270&impolicy=akamai_vidz1_zee5_com-IPM`}
+                                    imageDescription={ele.cover_image}
+                          />
+                        </Link>
+                      )
+                    })}
+                </GridList>
               </div> : null
             }
             
