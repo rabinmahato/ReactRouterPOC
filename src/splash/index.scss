@@ -1,0 +1,32 @@
+/*
+ * Copyright (C) 2014-2018 L&T Technology Services, All Rights Reserved.
+ *
+ * This source code and any compilation or derivative thereof is the
+ * proprietary information of L&T and is confidential in nature.
+ * Under no circumstances is this software to be exposed to or placed under
+ * an Open Source License of any type without the expressed written permission
+ * of L&T.
+ */
+
+@import '../styles/css_function.scss';
+@import '../styles/icons.scss';
+
+.SplashScreen {
+  @include set-background($background-splash);
+
+  .ScreenLoader {
+    @include absolute(0,0,100vw,100vh);
+
+    .Loader {
+      @include absolute(47.19vw,70.05vh,5.63vw,9.91vh);
+    }
+  }
+
+  .AppVersion {
+    position: absolute;
+    font-size: 2em;
+    color: white;
+    right: 3vw;
+    bottom: 5vh;
+  }
+}
